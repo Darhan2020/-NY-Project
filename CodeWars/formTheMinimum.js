@@ -1,9 +1,10 @@
-// Given a list of digits, return the smallest number that could be formed from these digits, 
-// using the digits only once (ignore duplicates)
-function minValue(values){
-    return +values.filter((el,i,arr) => i === arr.lastIndexOf(el)).sort((a,b) => a - b).join('');
+function countSalutes(hallway) {
+  let s = 0;
+  let arr = hallway.split('');
+  for(let i = 0; i<arr.length; i++){
+   if(arr[i] === '>') {
+     s += arr.filter((el,j) => el === '<' && j > i).length;  
+   }     
   }
-  
-  
-
-
+  return 2 * s;
+}
