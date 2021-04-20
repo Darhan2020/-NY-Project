@@ -28,17 +28,55 @@ describe("Main page test suite", () => {
     expect(actualBookStoreApplication).to.equal('Book Store Application');
    });
    it('Click on Element tile and validate the target URL', () => {
-    browser.maximizeWindow();
+     browser.maximizeWindow();
+    // browser.url('https://demoqa.com');
     const element = $$('.category-cards > div')[0];
     element.click();
     const actualURL = browser.getUrl();
     expect(actualURL).to.equal('https://demoqa.com/elements');
-   
    });
-  //  it('name of the test', () => {
-     
-  //  });
+   it('Click on Forms tile and validate the target URL', () => {
+    browser.maximizeWindow();
+    browser.url('https://demoqa.com');
+    const element = $$('.category-cards > div')[1];
+    element.click();
+    const actualURL = browser.getUrl();
+    expect(actualURL).to.equal('https://demoqa.com/forms');
+   });
+  it('Click on Alerts, Frame & Windows tile and validate the target URL'), () => {
+   browser.maximizeWindow();
+   browser.url('https://demoqa.com');
+   const element = $$('.category-cards > div')[2];
+   element.click();
+   const actualURL = browser.getUrl();
+   expect(actualURL).to.equal('https://demoqa.com/alertsWindows');}
+
+   });
+   it('Click on Widgets tile and validate the target URL', () => {
+   browser.maximizeWindow();
+    browser.url('https://demoqa.com');
+    const element = $$('.category-cards > div')[3];
+    element.click();
+    const actualURL = browser.getUrl();
+    expect(actualURL).to.equal('https://demoqa.com/widgets');
+   });
+   it('Click on Interactions tile and validate the target URL', () => {
+  browser.maximizeWindow();
+    browser.url('https://demoqa.com');
+    const element = $$('.category-cards > div')[4];
+    element.click();
+    const actualURL = browser.getUrl();
+    expect(actualURL).to.equal('https://demoqa.com/interaction');
+   });
+   it('Click on Book Store tile and validate the target URL', () => {
+   browser.maximizeWindow();
+    browser.url('https://demoqa.com');
+    const element = $$('.category-cards > div')[5];
+    element.click();
+    const actualURL = browser.getUrl();
+    expect(actualURL).to.equal('https://demoqa.com/books');
+   });
   //  it('', () => {
      
   //  });
-});
+;
