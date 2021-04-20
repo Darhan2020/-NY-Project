@@ -1,5 +1,5 @@
 const expect = require("chai").expect;
-
+import {URLs, labels} from "../../expected";
 describe("Main page test suite", () => {
   it("Validate the title of the main page", () => {
     browser.url("https://demoqa.com/");
@@ -43,7 +43,7 @@ describe("Main page test suite", () => {
     const actualURL = browser.getUrl();
     expect(actualURL).to.equal('https://demoqa.com/forms');
    });
-  it('Click on Alerts, Frame & Windows tile and validate the target URL'), () => {
+  it('Click on Alerts, Frame & Windows tile and validate the target URL', () => {
    browser.maximizeWindow();
    browser.url('https://demoqa.com');
    const element = $$('.category-cards > div')[2];
@@ -51,7 +51,7 @@ describe("Main page test suite", () => {
    const actualURL = browser.getUrl();
    expect(actualURL).to.equal('https://demoqa.com/alertsWindows');}
 
-   });
+   );
    it('Click on Widgets tile and validate the target URL', () => {
    browser.maximizeWindow();
     browser.url('https://demoqa.com');
@@ -79,4 +79,4 @@ describe("Main page test suite", () => {
   //  it('', () => {
      
   //  });
-;
+});
