@@ -3,80 +3,73 @@ import {URLs, labels} from "../../expected";
 describe("Main page test suite", () => {
   it("Validate the title of the main page", () => {
     browser.url("https://demoqa.com/");
-    const expectedTitle = "ToolsQA";
     const actualTitle = browser.getTitle();
-    expect(actualTitle).to.equal(expectedTitle);
+    expect(actualTitle).to.equal(labels.title);
   });
   it("Validate the number of tiles on the main page", () => {
     const elements = $$("div.category-cards > div");
     expect(elements.length).to.equal(6);
   });
-   it('Validate the text of footer', () => {
-     const span = $('#app > footer > span');
-     const expectedText ='© 2013-2020 TOOLSQA.COM | ALL RIGHTS RESERVED.';
-     const actualText = span.getText();
-     expect(actualText).to.equal(expectedText);
-   });
-  it('Validate the names of tiles', () => {
-    const [actualElements,actualForms,actualAlerts,actualWidgets,actualInteractions,actualBookStoreApplication] 
-    = $$('h5').map(el=>el.getText());
-    expect(actualElements).to.equal('Elements');
-    expect(actualForms).to.equal('Forms');
-    expect(actualAlerts).to.equal('Alerts, Frame & Windows');
-    expect(actualWidgets).to.equal('Widgets');
-    expect(actualInteractions).to.equal('Interactions');
-    expect(actualBookStoreApplication).to.equal('Book Store Application');
-   });
-   it('Click on Element tile and validate the target URL', () => {
-     browser.maximizeWindow();
-    // browser.url('https://demoqa.com');
-    const element = $$('.category-cards > div')[0];
+  it("Validate the text of footer", () => {
+    const span = $("#app > footer > span");
+    const actualText = span.getText();
+    expect(actualText).to.equal(labels.footer);
+  });
+  it("Validate the names of tiles", () => {
+    const [
+      actualElements,
+      actualForms,
+      actualAlerts,
+      actualWidgets,
+      actualIteractions,
+      actualBookStore,
+    ] = $$("h5").map((el) => el.getText());
+    expect(actualElements).to.equal(labels.elements);
+    expect(actualForms).to.equal(labels.forms);
+    expect(actualAlerts).to.equal(labels.alerts);
+    expect(actualWidgets).to.equal(labels.widgets);
+    expect(actualIteractions).to.equal(labels.interactions);
+    expect(actualBookStore).to.equal(labels.books);
+  });
+  it("Click on Elements tile and validate the target URL", () => {
+    const element = $$(".category-cards > div")[0];
     element.click();
     const actualURL = browser.getUrl();
-    expect(actualURL).to.equal('https://demoqa.com/elements');
-   });
-   it('Click on Forms tile and validate the target URL', () => {
-    browser.maximizeWindow();
-    browser.url('https://demoqa.com');
-    const element = $$('.category-cards > div')[1];
+    expect(actualURL).to.equal(URLs.elements);
+  });
+  it("Click on Forms tile and validate the target URL", () => {
+    browser.url("https://demoqa.com/");
+    const element = $$(".category-cards > div")[1];
     element.click();
     const actualURL = browser.getUrl();
-    expect(actualURL).to.equal('https://demoqa.com/forms');
-   });
-  it('Click on Alerts, Frame & Windows tile and validate the target URL', () => {
-   browser.maximizeWindow();
-   browser.url('https://demoqa.com');
-   const element = $$('.category-cards > div')[2];
-   element.click();
-   const actualURL = browser.getUrl();
-   expect(actualURL).to.equal('https://demoqa.com/alertsWindows');}
-
-   );
-   it('Click on Widgets tile and validate the target URL', () => {
-   browser.maximizeWindow();
-    browser.url('https://demoqa.com');
-    const element = $$('.category-cards > div')[3];
+    expect(actualURL).to.equal(URLs.forms);
+  });
+  it("Click on AlertsWindows tile and validate the target URL", () => {
+    browser.url("https://demoqa.com/");
+    const element = $$(".category-cards > div")[2];
     element.click();
     const actualURL = browser.getUrl();
-    expect(actualURL).to.equal('https://demoqa.com/widgets');
-   });
-   it('Click on Interactions tile and validate the target URL', () => {
-  browser.maximizeWindow();
-    browser.url('https://demoqa.com');
-    const element = $$('.category-cards > div')[4];
+    expect(actualURL).to.equal(URLs.alertsWindows);
+  });
+  it("Click on Widgets tile and validate the target URL", () => {
+    browser.url("https://demoqa.com/");
+    const element = $$(".category-cards > div")[3];
     element.click();
     const actualURL = browser.getUrl();
-    expect(actualURL).to.equal('https://demoqa.com/interaction');
-   });
-   it('Click on Book Store tile and validate the target URL', () => {
-   browser.maximizeWindow();
-    browser.url('https://demoqa.com');
-    const element = $$('.category-cards > div')[5];
+    expect(actualURL).to.equal(URLs.widgets);
+  });
+  it("Click on Interaction tile and validate the target URL", () => {
+    browser.url("https://demoqa.com/");
+    const element = $$(".category-cards > div")[4];
     element.click();
     const actualURL = browser.getUrl();
-    expect(actualURL).to.equal('https://demoqa.com/books');
-   });
-  //  it('', () => {
-     
-  //  });
+    expect(actualURL).to.equal(URLs.interaction);
+  });
+  it("Click on Books tile and validate the target URL", () => {
+    browser.url("https://demoqa.com/");
+    const element = $$(".category-cards > div")[5];
+    element.click();
+    const actualURL = browser.getUrl();
+    expect(actualURL).to.equal(URLs.books);
+  });
 });
