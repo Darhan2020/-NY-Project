@@ -1,6 +1,6 @@
 export const labels = {
     mainHeader: "Practice Form",
-    header: "Student Registration Form",
+   
 
     textBoxLabels: {
         name: "Name",
