@@ -1,6 +1,9 @@
-class TextBoxPracticeForm {
+class textBoxPracticeForm {
+    get labelHeader(){
+      return $$("#app > div > div > div.pattern-backgound.playgound-header > div")[0].getText();
+    }
     get labelName() {
-      return $("#userName-wrapper > div.col-md-3 col-sm-12").getText();
+      return $("#userNameWrapper> div.col-md-3 col-sm-12").getText();
     }
     get labelEmail() {
       return $("#userEmail-label").getText();
@@ -31,4 +34,4 @@ class TextBoxPracticeForm {
       return $("#stateAndCity-label").getText();
     }  
 }
-    export default new TextBoxPracticeForm();
+    export default new textBoxPracticeForm();

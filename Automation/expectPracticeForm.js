@@ -1,8 +1,5 @@
-export const labels = {
-    mainHeader: "Practice Form",
-   
-
-    textBoxLabels: {
+export const textBoxLabels = {
+        header: "Practice Form",
         name: "Name",
         email: "name@example.com",
         gender: "Gender",
@@ -13,7 +10,7 @@ export const labels = {
         picture: "Picture",
         currentAdress: "Current Adress",
         stateAndCity: "State and City"
-    }
+
 }
 
 // export const labels = {

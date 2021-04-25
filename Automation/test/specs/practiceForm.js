@@ -1,24 +1,22 @@
 const expect = require("chai").expect;
-import {labels} from "../../expectPracticeForm.js";
-import TextBoxPracticeForm from "../../textboxPracticeForm.js";
+import textBoxLabels from "../../expectPracticeForm"
+import textBoxPracticeForm from "../../textboxPracticeForm";
 
 describe('Validate Practice Form section', () => {
-    it('Navigate to Practice Form page and check the header text', () => {
-        browser.url("https://demoqa.com/forms");
-            const header = $(".main-header");
-            expect(header.getText()).to.equal(labels.mainHeader); 
+    
+    it('Validate the labels in TextBox area', () => {
+        browser.url("https://demoqa.com/automation-practice-form");
+        expect(TextBoxPracticeForm.labelHeader).to.equal(textBoxLabels.header); 
+        expect(TextBoxPracticeForm.labelName).to.equal(textBoxLabels.name);
+        expect(TextBoxPracticeForm.labelEmail).to.equal(textBoxLabels.email);
+        expect(TextBoxPracticeForm.labelGender).to.equal(textBoxLabels.gender);
+        expect(TextBoxPracticeForm.labelMobileNumber).to.equal(textBoxLabels.mobile);
+        expect(TextBoxPracticeForm.labelDateOfBirth).to.equal(textBoxLabels.dob);
+        expect(TextBoxPracticeForm.labelSubjects).to.equal(textBoxLabels.subjects);
+        expect(TextBoxPracticeForm.labelHobbiles).to.equal(textBoxLabels.hobbies);
+        expect(TextBoxPracticeForm.labelPicture).to.equal(textBoxLabels.picture);
+        expect(TextBoxPracticeForm.labelCurrentAdress).to.equal(textBoxLabels.currentAdress);
+        expect(TextBoxPracticeForm.labelStateAndCity).to.equal(textBoxLabels.stateAndCity);
     });
 
-    it('Validate the labels in TextBox area', () => {
-        expect(TextBoxPracticeForm.labelName).to.equal(labels.textBoxLabels.name);
-        expect(TextBoxPracticeForm.labelEmail).to.equal(labels.textBoxLabels.email);
-        expect(TextBoxPracticeForm.labelGender).to.equal(labels.textBoxLabels.gender);
-        expect(TextBoxPracticeForm.labelMobileNumber).to.equal(labels.textBoxLabels.mobile);
-        expect(TextBoxPracticeForm.labelDateOfBirth).to.equal(labels.textBoxLabels.dob);
-        expect(TextBoxPracticeForm.labelSubjects).to.equal(labels.textBoxLabels.subjects);
-        expect(TextBoxPracticeForm.labelHobbiles).to.equal(labels.textBoxLabels.hobbies);
-        expect(TextBoxPracticeForm.labelPicture).to.equal(labels.textBoxLabels.picture);
-        expect(TextBoxPracticeForm.labelCurrentAdress).to.equal(labels.textBoxLabels.currentAdress);
-        expect(TextBoxPracticeForm.labelStateAndCity).to.equal(labels.textBoxLabels.stateAndCity)
-    });
 });
