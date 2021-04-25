@@ -14,7 +14,6 @@ export const labels = {
         currentAdress: "Current Adress",
         stateAndCity: "State and City"
     }
-  
 }
 
 // export const labels = {

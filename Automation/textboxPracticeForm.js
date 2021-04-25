@@ -6,7 +6,7 @@ class TextBoxPracticeForm {
       return $("#userEmail-label").getText();
     }
     get labelGender() {
-      return $$("#genterWrapper > div")[0].getText();
+      return $$("#genterWrapper > div.col-md-3.col-sm-12")[0].getText();
     }
     get labelMobileNumber() {
       return $("#mobileNumber-label").getText();
@@ -23,6 +23,10 @@ class TextBoxPracticeForm {
     get labelPicture() {
       return $$("#subject-label")[2].getText();
     }
+    get labelCurrentAdress() {
+      return $("currentAddress-label").getText();
+      }
+    
     get labelStateAndCity() {
       return $("#stateAndCity-label").getText();
     }  
