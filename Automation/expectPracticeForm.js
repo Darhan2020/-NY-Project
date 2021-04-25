@@ -1,19 +1,16 @@
-export const labels = {
-    mainHeader: "Practice Form",
-   
-
-    textBoxLabels: {
+export const textBoxLabels = {
+        header: "Practice Form",
         name: "Name",
-        email: "name@example.com",
+        email: "Email",
         gender: "Gender",
-        mobile: "Mobile Number(10 Digits)",
+        mobile: "Mobile(10 Digits)",
         dob: "Date of Birth",
         subjects: "Subjects",
         hobbies: "Hobbies",
         picture: "Picture",
         currentAdress: "Current Adress",
         stateAndCity: "State and City"
-    }
+
 }
 
 // export const labels = {
