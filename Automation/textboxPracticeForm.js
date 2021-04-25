@@ -1,6 +1,6 @@
 class TextBoxPracticeForm {
     get labelName() {
-      return $("#userName-label").getText();
+      return $("#userName-wrapper > div.col-md-3 col-sm-12").getText();
     }
     get labelEmail() {
       return $("#userEmail-label").getText();

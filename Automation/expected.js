@@ -11,7 +11,7 @@ export const labels = {
     title: "ToolsQA",
     footer: "© 2013-2020 TOOLSQA.COM | ALL RIGHTS RESERVED.",
     elements :"Elements",
-    forms: "Forms",
+    forms: "Practice Form",
     alerts: "Alerts, Frame & Windows",
     widgets: "Widgets",
     interactions: "Interactions",
