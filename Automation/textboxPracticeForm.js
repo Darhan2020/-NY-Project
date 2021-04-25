@@ -1,9 +1,9 @@
-class textBoxPracticeForm {
+class formTextBox {
     get labelHeader(){
       return $$("#app > div > div > div.pattern-backgound.playgound-header > div")[0].getText();
     }
     get labelName() {
-      return $("#userNameWrapper> div.col-md-3 col-sm-12").getText();
+      return $("#userName-label").getText();
     }
     get labelEmail() {
       return $("#userEmail-label").getText();
@@ -12,7 +12,7 @@ class textBoxPracticeForm {
       return $$("#genterWrapper > div.col-md-3.col-sm-12")[0].getText();
     }
     get labelMobileNumber() {
-      return $("#mobileNumber-label").getText();
+      return $("#userNumber-label").getText();
     }
     get labelDateOfBirth() {
       return $("#dateOfBirth-label").getText();
@@ -29,9 +29,8 @@ class textBoxPracticeForm {
     get labelCurrentAdress() {
       return $("currentAddress-label").getText();
       }
-    
     get labelStateAndCity() {
       return $("#stateAndCity-label").getText();
     }  
 }
-    export default new textBoxPracticeForm();
+    export default new formTextBox();

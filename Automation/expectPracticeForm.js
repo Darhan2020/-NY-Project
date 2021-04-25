@@ -1,9 +1,9 @@
 export const textBoxLabels = {
         header: "Practice Form",
         name: "Name",
-        email: "name@example.com",
+        email: "Email",
         gender: "Gender",
-        mobile: "Mobile Number(10 Digits)",
+        mobile: "Mobile(10 Digits)",
         dob: "Date of Birth",
         subjects: "Subjects",
         hobbies: "Hobbies",
