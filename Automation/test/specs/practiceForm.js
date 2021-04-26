@@ -14,7 +14,7 @@ describe('Validate Practice Form section', () => {
         expect(formTextBox.labelSubjects).to.equal(textBoxLabels.subjects);
         expect(formTextBox.labelHobbies).to.equal(textBoxLabels.hobbies);
         expect(formTextBox.labelPicture).to.equal(textBoxLabels.picture);
-        expect(formTextBox.labelCurrentAdress).to.equal(textBoxLabels.currentAdress);
+        expect(formTextBox.labelCurrentAddress).to.equal(textBoxLabels.currentAddress);
         expect(formTextBox.labelStateAndCity).to.equal(textBoxLabels.stateAndCity);
     });
 });

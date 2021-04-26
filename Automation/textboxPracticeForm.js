@@ -24,13 +24,14 @@ class formTextBox {
       return $$("#subjects-label")[1].getText();
     }
     get labelPicture() {
-      return $$("#subject-label")[2].getText();
+      return $$("#subjects-label")[2].getText();
     }
-    get labelCurrentAdress() {
-      return $("currentAddress-label").getText();
-      }
+    get labelCurrentAddress() {
+      return $("#currentAddress-label").getText();
+    }
     get labelStateAndCity() {
-      return $("#stateAndCity-label").getText();
+      return $("#stateCity-label").getText();
+    
     }  
 }
     export default new formTextBox();

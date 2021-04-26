@@ -8,8 +8,8 @@ export const textBoxLabels = {
         subjects: "Subjects",
         hobbies: "Hobbies",
         picture: "Picture",
-        currentAdress: "Current Adress",
-        stateAndCity: "State and City"
+        currentAddress: "Current Address",
+        stateAndCity: "State and City",
 
 }
 
