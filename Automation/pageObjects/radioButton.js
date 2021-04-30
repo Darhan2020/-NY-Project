@@ -6,6 +6,9 @@ get yes(){
 get no(){
     return $('label[for = "noRadio"]');
 }
+get noInput(){
+    return $("#noRadio");
+}
 get impressive(){
    return $('label[for = "impressiveRadio"]');
 }
@@ -15,5 +18,9 @@ get radioButtons(){
 get textSuccsess(){
     return $('.text-success').getText();
 }
+    get headerRadioButton() {
+        return $('#main-header').getText();
+    }
 }
+
 export default new RadioButton(); 

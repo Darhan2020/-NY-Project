@@ -18,6 +18,7 @@ reading:"Reading",
 music:"Music",
 }
 
+
 export const URLs = {
         elements: "https://demoqa.com/elements",
         forms : "https://demoqa.com/forms",
@@ -28,6 +29,13 @@ export const URLs = {
         textBox: "https://demoqa.com/text-box",
         mainPage: "https://demoqa.com",
         checkbox: "https://demoqa.com/checkbox",
-        radioButton: "https://demoqa.com/radio-button"
-    }
+        radioButton: "https://demoqa.com/radio-button",
+        webTables: "https://demoqa.com/webtables"
+}
     
+    export const radioButtons = {
+        header : "Radio Button",
+    }
+//     export const webPlaceholders = {
+            
+//     }
