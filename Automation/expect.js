@@ -30,12 +30,17 @@ export const URLs = {
         mainPage: "https://demoqa.com",
         checkbox: "https://demoqa.com/checkbox",
         radioButton: "https://demoqa.com/radio-button",
-        webTables: "https://demoqa.com/webtables"
+        webTable: "https://demoqa.com/webtables"
 }
     
-    export const radioButtons = {
-        header : "Radio Button",
-    }
-//     export const webPlaceholders = {
-            
+//     export const radioButtons = {
+        // header : "Radio Button",
 //     }
+export const webPlaceholders = {
+firstName:"First Name",
+lastName: "Last Name",
+email: "name@example.com",
+age: "Age",
+salary:"Salary",
+department: "Department"          
+}
