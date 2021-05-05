@@ -44,3 +44,11 @@ age: "Age",
 salary:"Salary",
 department: "Department"          
 }
+export const registrationFormPlaceholders = {
+firstName:"First Name",
+lastName: "Last Name",
+email: "name@example.com",
+mobile: "Mobile(10 Digits)",
+currentAddress:"Current Address",        
+}
+        

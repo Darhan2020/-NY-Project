@@ -41,6 +41,37 @@ class PracticeForm {
   get hobbiesMusic() {
     return $("#hobbies-checkbox-3 + label");
   }
+  get inputFirstName() {
+    return $("#firstName");
+  }
+  get inputFirstNamePlaceholder() {
+    return this.inputFirstName.getAttribute("placeholder");
+  }
+  get inputLastName() {
+    return $("#lastName");
+  }
+  get inputLastNamePlaceholder() {
+    return this.inputLastName.getAttribute("placeholder");
+  }
+  get inputEmail() {
+    return $("#userEmail");
+  }
+  get inputEmailPlaceholder() {
+    return this.inputEmail.getAttribute("placeholder");
+  }
+  get inputMobile() {
+    return $("#userNumber");
+  }
+  get inputMobilePlaceholder() {
+    return this.inputMobile.getAttribute("placeholder");
+  }
+  get inputCurrentAddress() {
+    return $("#currentAddress");
+  }
+  get inputCurrentAddressPlaceholder() {
+    return this.inputCurrentAddress.getAttribute("placeholder");
+
+  }
 
 }
   export default new PracticeForm();

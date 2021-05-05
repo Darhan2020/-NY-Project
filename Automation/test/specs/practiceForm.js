@@ -1,5 +1,5 @@
 const expect = require("chai").expect;
-import {textBoxLabels , checkBoxHobbies} from "../../expect";
+import {textBoxLabels , checkBoxHobbies, registrationFormPlaceholders} from "../../expect";
 import PracticeForm from "../../pageObjects/PracticeForm";
 
 describe('Validate Practice Form section', () => {
@@ -25,5 +25,12 @@ describe('Validate Practice Form section', () => {
         expect(PracticeForm.hobbiesSports.getText()).to.equal(checkBoxHobbies.sports);
         expect(PracticeForm.hobbiesReading.getText()).to.equal(checkBoxHobbies.reading);
         expect(PracticeForm.hobbiesMusic.getText()).to.equal(checkBoxHobbies.music);
+    });
+    it('Validate Student Registration Form placeholders', () => {
+        expect(PracticeForm.inputFirstNamePlaceholder).to.equal(registrationFormPlaceholders.firstName);
+        expect(PracticeForm.inputLastNamePlaceholder).to.equal(registrationFormPlaceholders.lastName);
+        expect(PracticeForm.inputEmailPlaceholder).to.equal(registrationFormPlaceholders.email);
+        expect(PracticeForm.inputMobilePlaceholder).to.equal(registrationFormPlaceholders.mobile);
+        expect(PracticeForm.inputCurrentAddressPlaceholder).to.equal(registrationFormPlaceholders.currentAddress);
     });
 });
