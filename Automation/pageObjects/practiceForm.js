@@ -33,13 +33,13 @@ class PracticeForm {
     return $("#stateCity-label").getText();
   }  
   get hobbiesSports() {
-    return $("#hobbies-checkbox-1 + label");
+    return $("#hobbies-checkbox-1");
   }
   get hobbiesReading() {
-    return $("#hobbies-checkbox-2 + label");
+    return $("#hobbies-checkbox-2");
   }
   get hobbiesMusic() {
-    return $("#hobbies-checkbox-3 + label");
+    return $("#hobbies-checkbox-3");
   }
   get inputFirstName() {
     return $("#firstName");
@@ -71,6 +71,17 @@ class PracticeForm {
   get inputCurrentAddressPlaceholder() {
     return this.inputCurrentAddress.getAttribute("placeholder");
 
+  }
+  fillForm(obj) {
+    this.inputFirstName.setValue(obj.firstName);
+    this.inputLastName.setValue(obj.lastName);
+    this.inputEmail.setValue(obj.email);
+    this.inputMobile.setValue(obj.mobile);
+    this.inputCurrentAddress.setValue(obj.currentAddress);
+  
+  }
+  get btnSubmit() {
+    return $("#submit");
   }
 
 }

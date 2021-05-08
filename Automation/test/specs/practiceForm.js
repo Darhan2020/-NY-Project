@@ -1,9 +1,11 @@
 const expect = require("chai").expect;
-import {textBoxLabels , checkBoxHobbies, registrationFormPlaceholders} from "../../expect";
+import {textBoxLabels , checkBoxHobbies, registrationFormPlaceholders, studentRegistrationForm} from "../../expect";
 import PracticeForm from "../../pageObjects/PracticeForm";
+import {inputRegistrationForm} from "../../input";
 
 describe('Validate Practice Form section', () => {
     it('Validate the Labels in Text Box area', () => {
+        browser.maximizeWindow();
         browser.url("https://demoqa.com/automation-practice-form");
         expect(PracticeForm.labelHeader).to.equal(textBoxLabels.header);
         expect(PracticeForm.labelName).to.equal(textBoxLabels.name);
@@ -19,12 +21,12 @@ describe('Validate Practice Form section', () => {
     });
     it('Validate checkbox Hobbies', () => {
         if (!PracticeForm.hobbiesSports.isDisplayedInViewport())  PracticeForm.hobbiesSports.scrollIntoView();
-        PracticeForm.hobbiesSports.click();    
-        PracticeForm.hobbiesReading.click();
-        PracticeForm.hobbiesMusic.click();
-        expect(PracticeForm.hobbiesSports.getText()).to.equal(checkBoxHobbies.sports);
-        expect(PracticeForm.hobbiesReading.getText()).to.equal(checkBoxHobbies.reading);
-        expect(PracticeForm.hobbiesMusic.getText()).to.equal(checkBoxHobbies.music);
+        PracticeForm.hobbiesSports.nextElement().click();    
+        PracticeForm.hobbiesReading.nextElement().click();
+        PracticeForm.hobbiesMusic.nextElement().click();
+        expect(PracticeForm.hobbiesSports.nextElement().getText()).to.equal(checkBoxHobbies.sports);
+        expect(PracticeForm.hobbiesReading.nextElement().getText()).to.equal(checkBoxHobbies.reading);
+        expect(PracticeForm.hobbiesMusic.nextElement().getText()).to.equal(checkBoxHobbies.music);
     });
     it('Validate Student Registration Form placeholders', () => {
         expect(PracticeForm.inputFirstNamePlaceholder).to.equal(registrationFormPlaceholders.firstName);
@@ -33,4 +35,20 @@ describe('Validate Practice Form section', () => {
         expect(PracticeForm.inputMobilePlaceholder).to.equal(registrationFormPlaceholders.mobile);
         expect(PracticeForm.inputCurrentAddressPlaceholder).to.equal(registrationFormPlaceholders.currentAddress);
     });
-});
+    it('Fill Student Registration Form with Random data and submit', () => {
+        let myObj = inputRegistrationForm();
+        console.log(myObj);
+        PracticeForm.fillForm(myObj);
+        browser.pause(3000);
+        PracticeForm.btnSubmit.click();
+        browser.pause(3000);
+        
+    }); 
+    // it('Fill Student Registration Form with Random data and submit', () => {
+    //     expect(PracticeForm.inputFirstNamePlaceholder).to.equal(studentRegistrationForms.firstName);
+    //     expect(PracticeForm.inputLastNamePlaceholder).to.equal(studentRegistrationForm.lastName);
+    //     expect(PracticeForm.inputEmailPlaceholder).to.equal(studentRegistrationForm.email);
+    //     expect(PracticeForm.inputMobilePlaceholder).to.equal(studentRegistrationForm.mobile);
+    //     expect(PracticeForm.inputCurrentAddressPlaceholder).to.equal(studentRegistrationForm.current);
+  
+    });

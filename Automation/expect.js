@@ -48,7 +48,14 @@ export const registrationFormPlaceholders = {
 firstName:"First Name",
 lastName: "Last Name",
 email: "name@example.com",
-mobile: "Mobile(10 Digits)",
+mobile: "Mobile Number",
 currentAddress:"Current Address",        
+}
+export const studentRegistrationForm = {
+        firstName:"First Name",
+        lastName: "Last Name",
+        email: "name@example.com",
+        mobile: "Mobile(10 Digits)",
+        currentAddress:"Current Address",        
 }
         
